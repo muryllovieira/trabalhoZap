@@ -27,10 +27,6 @@ body {
     background-color: #ffffff;
 }
 
-.container-direito {
-    grid-area: container-direito;
-    background-color: #efeae2;
-}
 
 .header-esquerdo {
     display: flex;
@@ -126,56 +122,101 @@ body {
     padding-left: 8px;
 }
 
-.info-conversa {
-    color: #3B4A54;
-    font-size: 14px;
-    text-overflow: ellipsis;
-}
 
 .header-direito {
+    height: 100%;
     display: flex;
-    width: 100%;
-    height: 59px;
-    background-color: #F0F2F5;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
 }
 
 .nav-perfil-direito {
     display: flex;
-    justify-content: space-around;
     margin-right: 16px;
     gap: 35px;
 }
 
 .nav-perfil-direito i {
-    display: flex;
-    gap: 50px;
     font-size: 20px;
     color: #54656f;
+}
+
+.container-header {
+    display: flex;
+}
+
+.container-direito {
+    grid-area: container-direito;
+    background-color: #efeae2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.hide {
+    display: none;
+}
+
+.container-header-direito {
+    display: flex;
+    width: 100%;
+    height: 59px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F0F2F5;
+    border-left: .5px solid #d1d7db;
+}
+
+.img-perfil {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 16px;
     cursor: pointer;
 }
 
-.caixaDeMensagem{
-    position: relative;
+.container-perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 8px;
+}
+
+.info-nome {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info-conversa {
+    color: #3B4A54;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.caixaDeMensagem {
     width: 100%;
     height: 60px;
-    background-color: #F0F2F5;
+    background-color: #f0f2f5;
     padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    border-left: 1px solid #eae6df;
+    border-left: 1px solid #e9edef;
+    order: -1;
+
 }
 
-.caixaDeMensagem i{
+.caixaDeMensagem i {
     cursor: pointer;
     font-size: 1.2rem;
     color: #54656f;
 }
 
-.caixaDeMensagem input{
+.caixaDeMensagem input {
     position: relative;
     width: 90%;
     padding: 10px 20px;
@@ -184,37 +225,50 @@ body {
     border-radius: 30px;
     font-size: 1em;
 }
-.conversa{
-    position: relative;
-    width: 100%;
+
+.container-mensagens-direita {
+    display: flex;
     height: calc(100% - 120px);
-    padding: 50px;
-    overflow-y: auto;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
 }
 
-.message {
+.caixa-mensagens-minha {
     display: flex;
-    width: 100%;
-    margin: 5px 0;
-  }
-  
-  .message p {
-    position: relative;
-    right: 0;
-    text-align: right;
-    max-width: 65%;
-    padding: 12px;
-    background-color:#d9fdd3;
-    border-radius: 10px;
-    font-size: 0.9em;
-  }
-.minha_mensagem{
+    font-family: Arial, Helvetica, sans-serif;
     justify-content: flex-end;
 }
-.mensagem_outra_pessoa{
-    justify-content: flex-start;
+
+.msg-minha {
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #d9fdd3;
 }
-.mensagem_outra_pessoa p{
-    background-color: #fff;
-    text-align: left;
+
+.hora-minha {
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
+.caixa-mensagens-sua {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.msg-sua {
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #ffffff;
+}
+
+.hora-sua {
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+.img-zap{
+    width: 100%;
+    height: 100%;
 }
