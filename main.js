@@ -10,6 +10,7 @@ const criarCard = (contato, indice) => {
     conversa.addEventListener('click', (event) => {
         var container = document.getElementById('container-mensagens')
         container.replaceChildren(criarMensagem(indice), criarHeader(indice), carregarMessageBar())
+        barraDeRolagem()
     })
 
     const fotoPessoa = document.createElement('img')
@@ -157,6 +158,6 @@ const carregarContatos = () => {
 
     container.replaceChildren(...contatosMensagens)
 }
-
+const barraDeRolagem = () =>  window.scroll (0, document.body.scrollHeight)
 
 carregarContatos()
