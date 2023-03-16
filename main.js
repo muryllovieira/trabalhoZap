@@ -55,7 +55,7 @@ const criarHeader = (indice) => {
 
     const imgPerfil = document.createElement('img')
     imgPerfil.classList.add('img-perfil')
-    imgPerfil.src = `../${contatos[indice].image}`
+    imgPerfil.src = `./${contatos[indice].image}`
 
     const containerPerfil = document.createElement('div')
     containerPerfil.classList.add('container-perfil')
